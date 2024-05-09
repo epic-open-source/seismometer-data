@@ -5,7 +5,7 @@ Data repository for [seismometer](http://github.com/epic-open-source/seismometer
 | :---: |
 
 This repository exists to provide example data sets used for documentation, examples, and issue submission that do not contain PHI or PII. The data sets may have their own associated license. 
-The datasets may change or be removed at any time if they are no longer useful for the seismometer documentation. Some of the datasets have also been modifed from their canonical sources.
+The datasets may change or be removed at any time if they are no longer useful for the seismometer documentation. Some of the datasets have also been modified from their canonical sources.
 
 Data sources
 ------------
