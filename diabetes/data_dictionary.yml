@@ -126,4 +126,4 @@ events:
     display_name: "Our Target"
     definition: |
       A binary indicator of whether the patient experienced the predicted event
-    dtype: bool
+    dtype: int
