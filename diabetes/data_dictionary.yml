@@ -131,29 +131,29 @@ predictions:
   dtype: datetime64[ns]
   name: ScoringTime
 events:
-  - source: Readmitted30Days
+  - name: Readmitted30Days
     display_name: Readmitted (<=30 Days)
     definition: |
       A binary indicator of whether the patient was readmitted
       Real target from the original UC Irvine dataset
     dtype: int
-  - source: Readmitted
+  - name: Readmitted
     display_name: Readmitted (Any)
     definition: |
       A binary indicator of whether the patient was readmitted
       Real target from the original UC Irvine dataset
     dtype: int
-  - source: LongHospitalStay
+  - name: LongHospitalStay
     display_name: Long Hosptial Stay (>7 days)
     definition: |
       A binary indicator of whether the patient experienced the predicted event
       An additional target to act as a proxy for severity
-  - source: HospitalStay
+  - name: HospitalStay
     display_name: Length of Hospital Visit
     definition: |
       The number of days the patient stayed in the hospital
       Re-using the hospital stay as an outcome event (not a target)
-  - source: TakingMetformin
+  - name: TakingMetformin
     display_name: Taking Metformin
     definition: |
       A binary indicator of whether the patient experienced the predicted event
