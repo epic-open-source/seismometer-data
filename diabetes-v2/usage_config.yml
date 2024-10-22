@@ -31,6 +31,12 @@ data_usage:
       display_name: Race
     - source: gender
       display_name: Gender
+    - source: A1Cresult  
+      display_name: A1C
+    - source: insulin  
+      display_name: Taking Insulin
+    - source: metformin   
+      display_name: Taking Metformin
   # The event_table allows mapping of event columns to those expected by the tool
   # The table must have the entity_id column and may have context_id column if being used
   event_table:
