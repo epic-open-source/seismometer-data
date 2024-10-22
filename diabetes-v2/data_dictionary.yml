@@ -134,14 +134,8 @@ predictions:
   dtype: datetime64[ns]
   name: ScoringTime
 events:
-  - name: Readmitted30Days
-    display_name: Readmitted (<=30 Days)
-    definition: |
-      A binary indicator of whether the patient was readmitted
-      Real target from the original UC Irvine dataset
-    dtype: int
   - name: Readmitted
-    display_name: Readmitted (Any)
+    display_name: Readmitted
     definition: |
       A binary indicator of whether the patient was readmitted
       Real target from the original UC Irvine dataset

@@ -46,7 +46,7 @@ data_usage:
   # Events define what types of events to merge into analyses
   # Windowing defines the range of time prior to the event where predictions are considered
   events:
-    - source: Readmitted30Days
+    - source: Readmitted
       display_name: Readmitted within 30 Days
       window_hr: 720
       offset_hr: 0
