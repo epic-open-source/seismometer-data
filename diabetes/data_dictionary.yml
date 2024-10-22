@@ -115,50 +115,15 @@ predictions:
 - definition: Patient diabetesMed
   dtype: int64
   name: diabetesMed
-- definition: Patient predicted risk of readmission within 30 days scaled from 0-1
+- definition: Patient predicted risk
   dtype: float64
-  name: Risk30DayReadmission
-- definition: Patient predicted risk of readmission within 30 days scaled to 0-100
-  dtype: float64
-  name: Risk30DayReadmissionPercentile
-- definition: Patient predicted risk of any readmission scaled 0-1
-  dtype: float64
-  name: RiskAnyReadmission
-- definition: Risk of a more than 14 day hosptial stay scaled 0-1
-  dtype: float64
-  name: RiskLongStay
-- definition: Expected length of hospital stay in days
-  dtype: float64
-  name: ExpectedHospitalStay
+  name: LGBM_score
 - definition: Timestamp of when the patient was scored
   dtype: datetime64[ns]
   name: ScoringTime
 events:
-  - name: Readmitted30Days
-    display_name: Readmitted (<=30 Days)
-    definition: |
-      A binary indicator of whether the patient was readmitted
-      Real target from the original UC Irvine dataset
-    dtype: int
-  - name: Readmitted
-    display_name: Readmitted (Any)
-    definition: |
-      A binary indicator of whether the patient was readmitted
-      Real target from the original UC Irvine dataset
-    dtype: int
-  - name: LongHospitalStay
-    display_name: Long Hosptial Stay (>7 days)
+  - name: TargetLabel
+    display_name: "Our Target"
     definition: |
       A binary indicator of whether the patient experienced the predicted event
-      An additional target to act as a proxy for severity
-  - name: HospitalStay
-    display_name: Length of Hospital Visit
-    definition: |
-      The number of days the patient stayed in the hospital
-      Re-using the hospital stay as an outcome event (not a target)
-  - name: TakingMetformin
-    display_name: Taking Metformin
-    definition: |
-      A binary indicator of whether the patient experienced the predicted event
-      Fake intervention event based on patients taking Metformin
     dtype: int
