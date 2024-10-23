@@ -17,6 +17,7 @@ A list of where these datasets originate from.
 
 ## Adding and Versioning Data Sets
 
-Avoid breaking changes. Try not to removing (or rename) columns if modifying a dataset that is currently in use as a Seismometer example. If necessary, consider creating a versioned directory to allow existing users to continue to use earlier datasets and support backwards compatiblity.
+Avoid breaking changes. Try not to remove (or rename) columns if modifying a dataset that is currently in use as a Seismometer example. If necessary, consider creating a versioned directory to allow existing users to continue to use earlier datasets and support backwards compatibility.
 
-Include the default testing files associated with a dataset, so its easy to import the entire folder contents into a model notebook folder for experimentation.
+Include the default testing files associated with a dataset, so it's easy to import the entire folder contents into a model notebook folder for experimentation.
+
