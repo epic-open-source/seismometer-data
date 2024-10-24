@@ -1,0 +1,7 @@
+{
+    "modelname": "30DayReadmissionRisk",
+    "thresholds": [
+        0.10,
+        0.20
+    ]
+}

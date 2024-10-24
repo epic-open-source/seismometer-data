@@ -1,1 +1,4 @@
 .vscode
+.devcontainer
+scratch
+.ipynb_checkpoints
