@@ -37,6 +37,32 @@ data_usage:
       display_name: Taking Insulin
     - source: metformin   
       display_name: Taking Metformin
+  # Metrics
+  metrics:
+    - source: PatientSatisfaction_ReadmissionFollowup
+      display_name: PatientSatisfaction_ReadmissionFollowup
+      metric_type: feedback
+      group_keys: Patient Feedback
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
+    - source: CaseManager_Feedback_30day_30_80_Threshold_Effectiveness
+      display_name: CaseManager_Feedback_30day_30_80_Threshold_Effectiveness
+      metric_type: feedback
+      group_keys: CaseManager Feedback
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
+    - source: CaseManager_Feedback_30day_30_80_Threshold_Impact
+      display_name: CaseManager_Feedback_30day_30_80_Threshold_Impact
+      metric_type: feedback
+      group_keys: CaseManager Feedback
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
+    - source: CaseManager_Feedback_30day_30_80_Threshold_Clarity
+      display_name: CaseManager_Feedback_30day_30_80_Threshold_Clarity
+      metric_type: feedback
+      group_keys: CaseManager Feedback
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
   # The event_table allows mapping of event columns to those expected by the tool
   # The table must have the entity_id column and may have context_id column if being used
   event_table:
