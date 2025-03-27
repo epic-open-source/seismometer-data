@@ -41,25 +41,25 @@ data_usage:
   metrics:
     - source: PatientSatisfaction_ReadmissionFollowup
       display_name: Patient Satisfaction
-      metric_type: 'ordinal/categorical'
+      type: 'ordinal/categorical'
       group_keys: Patient Feedback
       metric_details:
           values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
     - source: CaseManager_Feedback_30day_30_80_Threshold_Effectiveness
       display_name: CaseManager Feedback Effectiveness
-      metric_type: ordinal/categorical
+      type: ordinal/categorical
       group_keys: CaseManager Feedback
       metric_details:
           values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
     - source: CaseManager_Feedback_30day_30_80_Threshold_Impact
       display_name: CaseManager Feedback Impact
-      metric_type: 'ordinal/categorical'
+      type: 'ordinal/categorical'
       group_keys: CaseManager Feedback
       metric_details:
           values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
     - source: CaseManager_Feedback_30day_30_80_Threshold_Clarity
       display_name: CaseManager Feedback Clarity
-      metric_type: 'ordinal/categorical'
+      type: 'ordinal/categorical'
       group_keys: CaseManager Feedback
       metric_details:
           values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
