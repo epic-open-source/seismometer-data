@@ -77,19 +77,19 @@ data_usage:
       window_hr: 720
       offset_hr: 0
       usage: target
-      score_rollup: max
+      aggregation_method: max
     - source:  Readmitted
       display_name: Readmitted (Any)
       window_hr: 1440
       offset_hr: 0
       usage: target
-      score_rollup: max
+      aggregation_method: max
     - source: LongHospitalStay
       display_name: Long Hosptial Stay (>7 days)
       window_hr: 168
       offset_hr: 0
       usage: target
-      score_rollup: max
+      aggregation_method: max
     - source: HospitalStay
       display_name: Actual Length of Hospital Visit
       window_hr: 720
