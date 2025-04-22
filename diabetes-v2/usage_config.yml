@@ -37,6 +37,32 @@ data_usage:
       display_name: Taking Insulin
     - source: metformin   
       display_name: Taking Metformin
+  # Metrics
+  metrics:
+    - source: PatientSatisfaction_ReadmissionFollowup
+      display_name: Patient Satisfaction
+      type: ordinal/categorical
+      group_keys: Patient Feedback
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
+    - source: CaseManager_Feedback_30day_30_80_Threshold_Effectiveness
+      display_name: CaseManager Feedback Effectiveness
+      type: ordinal/categorical
+      group_keys: [CaseManager Feedback, Threshold-Guided Feedback]
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
+    - source: CaseManager_Feedback_30day_30_80_Threshold_Impact
+      display_name: CaseManager Feedback Impact
+      type: ordinal/categorical
+      group_keys: [CaseManager Feedback, Threshold-Guided Feedback]
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
+    - source: CaseManager_Feedback_30day_30_80_Threshold_Clarity
+      display_name: CaseManager Feedback Clarity
+      type: ordinal/categorical
+      group_keys: [CaseManager Feedback, Threshold-Guided Feedback]
+      metric_details:
+          values: ['Very Poor', 'Poor', 'Neutral', 'Good', 'Excellent']
   # The event_table allows mapping of event columns to those expected by the tool
   # The table must have the entity_id column and may have context_id column if being used
   event_table:
@@ -51,19 +77,19 @@ data_usage:
       window_hr: 720
       offset_hr: 0
       usage: target
-      score_rollup: max
+      aggregation_method: max
     - source:  Readmitted
       display_name: Readmitted (Any)
       window_hr: 1440
       offset_hr: 0
       usage: target
-      score_rollup: max
+      aggregation_method: max
     - source: LongHospitalStay
-      display_name: Long Hosptial Stay (>7 days)
+      display_name: Long Hospital Stay (>7 days)
       window_hr: 168
       offset_hr: 0
       usage: target
-      score_rollup: max
+      aggregation_method: max
     - source: HospitalStay
       display_name: Actual Length of Hospital Visit
       window_hr: 720
