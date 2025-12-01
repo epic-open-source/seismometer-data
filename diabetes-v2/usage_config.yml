@@ -37,6 +37,21 @@ data_usage:
       display_name: Taking Insulin
     - source: metformin   
       display_name: Taking Metformin
+    - source: location   
+      display_name: Location
+    - source: department   
+      display_name: Department
+    - source: specialty   
+      display_name: Specialty
+  # Filters applied at data load time to reduce data volume
+  load_time_filters:
+  - source: specialty
+    action: keep_top
+    count: 18
+  # Hierarchies define relationships between cohort columns for drill-down analysis
+  cohort_hierarchies:
+    - name: Location hierarchy
+      column_order: ['location', 'department', 'specialty']
   # Metrics
   metrics:
     - source: PatientSatisfaction_ReadmissionFollowup

@@ -124,7 +124,7 @@ predictions:
 - definition: Patient predicted risk of any readmission scaled 0-1
   dtype: float64
   name: RiskAnyReadmission
-- definition: Risk of a more than 14 day hosptial stay scaled 0-1
+- definition: Risk of a more than 14 day hospital stay scaled 0-1
   dtype: float64
   name: RiskLongStay
 - definition: Expected length of hospital stay in days
@@ -133,6 +133,15 @@ predictions:
 - definition: Timestamp of when the patient was scored
   dtype: datetime64[ns]
   name: ScoringTime
+- definition: Hospital location (organizational context)
+  dtype: object
+  name: location
+- definition: Department within the selected location
+  dtype: object
+  name: department
+- definition: Clinical specialty or service line
+  dtype: object
+  name: specialty
 events:
   - name: Readmitted
     display_name: Readmitted
