@@ -1,0 +1,67 @@
+binary_metrics_fairness_table:
+- cohorts:
+    A1C:
+    - '>7'
+    - '>8'
+    - None
+    - Norm
+    Age:
+    - 70+
+    - '[0-10)'
+    - '[10-20)'
+    - '[20-50)'
+    - '[50-70)'
+    Gender:
+    - Female
+    - Male
+    Race:
+    - AfricanAmerican
+    - Asian
+    - Caucasian
+    - Hispanic
+    - Other
+    - Unknown
+    Taking Insulin:
+    - Down
+    - 'No'
+    - Steady
+    - Up
+    Taking Metformin:
+    - Down
+    - 'No'
+    - Steady
+    - Up
+  options:
+    fairness_ratio: 0.2
+    metric_generator: 0.3333333333333333
+    metric_list:
+    - Accuracy
+    - Sensitivity
+    - Specificity
+    - PPV
+    per_context: false
+    score: Risk30DayReadmission
+    target: Readmitted within 30 Days
+    threshold: 0.2
+plot_cohort_evaluation:
+- cohorts:
+    Age:
+    - 70+
+    - '[0-10)'
+    - '[10-20)'
+    - '[20-50)'
+    - '[50-70)'
+    Race:
+    - AfricanAmerican
+    - Asian
+    - Caucasian
+    - Hispanic
+    - Other
+    - Unknown
+  options:
+    per_context: false
+    score_column: Risk30DayReadmission
+    target_column: Readmitted within 30 Days
+    thresholds:
+    - 0.2
+    - 0.1
